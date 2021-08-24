@@ -1,4 +1,4 @@
-# Sample Tech Radar
+# Tech Radar Example
 
 Tech Radar example using [Jekyll](https://jekyllrb.com/) and [blips-chart](https://github.com/davideicardi/blips-chart).
 
