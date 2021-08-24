@@ -1,0 +1,14 @@
+collections:
+  blips:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "blips"
+    values:
+      layout: "blip"
+  - scope:
+      path: ""
+    values:
+      layout: "default"

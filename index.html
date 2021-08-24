@@ -1,0 +1,101 @@
+---
+title: Sample Tech Radar
+---
+<h1>Sample Tech Radar</h1>
+
+<div style="max-width: 800px;max-height: 800px;">
+  <svg id="radar"></svg>
+</div>
+
+<script type="module">
+  import { setup_tech_radar_chart } from 'https://cdn.jsdelivr.net/npm/blips-chart@1.1.0/dist/blips-chart.js';
+  // const blips = {{ site.blips | jsonify }};
+  const blips = [
+    // quadrant: 0,1,2,3 (counting clockwise, starting from bottom right)
+    // ring: 0,1,2,3 (starting from inside)
+    // moved: -1 = moved out (triangle pointing down), 0 = not moved (circle), 1 = moved in  (triangle pointing up)
+    {
+      link: "http://www.google.com",
+      label: ".NET",
+      quadrant: 0,
+      ring: 0,
+      moved: 0
+    },
+    {
+      label: "Kafka",
+      quadrant: 1,
+      ring: 2,
+      moved: 1
+    },
+    {
+      label: "Strapi",
+      quadrant: 2,
+      ring: 3,
+      moved: -1
+    },
+    {
+      label: "Deno",
+      quadrant: 3,
+      ring: 1,
+      moved: 0
+    },
+    {
+      label: "Docker",
+      quadrant: 2,
+      ring: 0,
+      moved: 0
+    },
+  ];
+
+  setup_tech_radar_chart({
+    svg_id: "radar",
+    colors: {
+      background: "#1d1d1d",
+      grid: "#ddd"
+    },
+    quadrants: [
+      { name: "Datastores & Data Management" },
+      { name: "Platforms & Infrastructure" },
+      { name: "Patterns & Techniques" },
+      { name: "Languages & Frameworks" },
+    ],
+    rings: [
+      { name: "ADOPT", color: "#f75258", text_color: "#f75258" },
+      { name: "TRIAL", color: "#54f6d1", text_color: "#54f6d1" },
+      { name: "ASSESS", color: "#5371f7", text_color: "#5371f7" },
+      { name: "HOLD", color: "#6f58c4", text_color: "#6f58c4" }
+    ],
+    entries: blips,
+  });
+</script>
+
+<table>
+  <thead>
+    <th>
+      Tech
+    </th>
+    <th>
+      Quadrant
+    </th>
+    <th>
+      Ring
+    </th>
+  </thead>
+  <tbody>
+    {% for blip in site.blips %}
+    <tr>
+      <td>
+        <a href="{{ blip.url }}">
+          {{ blip.title }}
+        </a>
+      </td>
+      <td>
+        {{ blip.quadrant }}
+      </td>
+      <td>
+        {{ blip.ring }}
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
