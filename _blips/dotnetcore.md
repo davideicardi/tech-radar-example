@@ -3,6 +3,7 @@ title: .NET Core
 quadrant: LANGUAGES
 ring: ADOPT
 website: https://dotnet.microsoft.com/
+moved: 0
 ---
 
 ## Description

@@ -1,9 +1,9 @@
 ---
-title: Apache Kafka
-quadrant: PLATFORMS
-ring: TRIAL
+title: MongoDb
+quadrant: DATA
+ring: ADOPT
 website: https://kafka.apache.org/
-moved: 1
+moved: 0
 ---
 
 ## Description

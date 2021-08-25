@@ -1,7 +1,7 @@
 ---
-title: Apache Kafka
+title: Strapi
 quadrant: PLATFORMS
-ring: TRIAL
+ring: ASSESS
 website: https://kafka.apache.org/
 moved: 1
 ---

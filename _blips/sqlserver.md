@@ -1,9 +1,9 @@
 ---
-title: Apache Kafka
-quadrant: PLATFORMS
-ring: TRIAL
+title: SQL Server
+quadrant: DATA
+ring: HOLD
 website: https://kafka.apache.org/
-moved: 1
+moved: -1
 ---
 
 ## Description

@@ -1,6 +1,10 @@
 collections:
   blips:
     output: true
+  rings:
+    sort_by: index
+  quadrants:
+    sort_by: index
 
 defaults:
   - scope:
