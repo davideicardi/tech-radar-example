@@ -3,7 +3,9 @@ title: Sample Tech Radar
 ---
 <h1>{{ page.title }}</h1>
 
-<svg id="radar"></svg>
+<div>
+  <svg id="radar"></svg>
+</div>
 
 <script type="module">
   import { create_chart } from 'https://cdn.jsdelivr.net/npm/blips-chart@1.2.0/dist/blips-chart.js';
@@ -23,57 +25,70 @@ title: Sample Tech Radar
   });
 </script>
 
-<table>
-  <thead>
-    <th>
-      Tech
-    </th>
-    <th>
-      Quadrant
-    </th>
-    <th>
-      Ring
-    </th>
-  </thead>
-  <tbody>
-    {% for blip in site.blips %}
-    <tr>
-      <td>
-        <a href="{{ blip.url | relative_url }}">
-          {{ blip.title }}
-        </a>
-      </td>
-      <td>
-        {{ blip.quadrant }}
-      </td>
-      <td>
-        {{ blip.ring }}
-      </td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
+<div class="">
+  <h2>Blips</h2>
+  <table>
+    <thead>
+      <th>
+        Tech
+      </th>
+      <th>
+        Quadrant
+      </th>
+      <th>
+        Ring
+      </th>
+    </thead>
+    <tbody>
+      {% for blip in site.blips %}
+      <tr>
+        <td>
+          <a href="{{ blip.url | relative_url }}">
+            {{ blip.title }}
+          </a>
+        </td>
+        <td>
+          {{ blip.quadrant }}
+        </td>
+        <td>
+          {{ blip.ring }}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
 
-<h2>Rings</h2>
-<ul>
-  {% for ring in site.rings %}
-  <li>
-    {{ ring.name }}
-    <p>
-      {{ ring.content | markdownify }}
-    </p>
-  </li>
-  {% endfor %}
-</ul>
-
-<h2>Quadrants</h2>
-<ul>
-  {% for quadrant in site.quadrants %}
-  <li>
-    {{ quadrant.name }}
-    <p>
-      {{ quadrant.content | markdownify }}
-    </p>
-  </li>
-  {% endfor %}
-</ul>
+<div class="columns">
+  <div class="alternate1">
+    <h2>Rings</h2>
+    <ul>
+      {% for ring in site.rings %}
+      <li>
+        <h3>
+          {{ ring.name }}
+        </h3>
+        <p>
+          {{ ring.content | markdownify }}
+        </p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  
+  <div class="alternate2">
+    <h2>Quadrants</h2>
+    <ul>
+      {% for quadrant in site.quadrants %}
+      <li>
+        <h3>
+          {{ quadrant.name }}
+        </h3>
+        <p>
+          {{ quadrant.content | markdownify }}
+        </p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
