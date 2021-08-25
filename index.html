@@ -39,7 +39,7 @@ title: Sample Tech Radar
     {% for blip in site.blips %}
     <tr>
       <td>
-        <a href="{{ blip.url }}">
+        <a href="{{ blip.url | relative_url }}">
           {{ blip.title }}
         </a>
       </td>
