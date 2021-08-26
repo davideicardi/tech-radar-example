@@ -19,6 +19,23 @@ There are 3 collections:
 
 All data are stored as html or markdown files, no database.
 
+## Adding and updating content
+
+To add or update the list of technologies inside the radar just change the 
+files inside the `_blips` directory.
+Each blip is composed by a markdown file with the following structure:
+```
+---
+title: MongoDb                      # Name of the technology
+quadrant: DATA                      # DATA, PLATFORMS, PATTERNS or LANGUAGES
+ring: ADOPT                         # HOLD, ASSESS, TRIAL or ADOPT
+website: https://www.mongodb.com/   # official website
+moved: 0                            # 0=not moved, 1=moved up, -1=moved down
+---
+
+some description
+```
+
 ## Requirements
 
 - Ruby version 2.5.0
