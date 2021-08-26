@@ -1,7 +1,8 @@
+html { font-size: calc(1em + 0.5vw) }
+
 body {
   background-color: #1d1d1d;
   color: white;
-  font-size: 18px;
 }
 
 a,
@@ -66,8 +67,10 @@ footer {
   flex-direction: row;
   > div {
     flex: 1;
-    border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
+  }
+  > div:last-child {
+    border-right: 0;
   }
 }
 
