@@ -1,8 +1,8 @@
 # Tech Radar Example
 
-Tech Radar example using [Jekyll](https://jekyllrb.com/) and [blips-chart](https://github.com/davideicardi/blips-chart).
+Tech Radar website using [Jekyll](https://jekyllrb.com/) and [blips-chart](https://github.com/davideicardi/blips-chart).
 
-See demo website [here](https://davideicardi.github.io/tech-radar-example/).
+See [demo here](https://davideicardi.github.io/tech-radar-example/).
 
 A Tech Radar is a list of technologies, complemented by an assessment result, called ring assignment.
 The Tech Radar is a tool to inspire and support developers to pick the best technologies; it provides a platform to share knowledge and experience in technologies, to reflect on technology decisions and continuously evolve our technology landscape.
@@ -17,7 +17,7 @@ There are 3 collections:
 - `rings`: list of rings inside the radar (must be 4), see `_rings`
 - `blips`: list of technologies, see `_blips`
 
-All data are stored as simple files inside git.
+All data are stored as html or markdown files, no database.
 
 ## Requirements
 
