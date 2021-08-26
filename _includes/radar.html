@@ -1,0 +1,24 @@
+<svg id="radar"></svg>
+
+<script type="module">
+  import { create_chart } from 'https://cdn.jsdelivr.net/npm/blips-chart@1.4.0/dist/blips-chart.js';
+  const baseUrl = '{{ baseurl }}';
+  const blips = {{ site.blips | jsonify }}
+    .map(b => {
+      b.url = baseUrl + b.url;
+      return b;
+    });
+  const rings = {{ site.rings | jsonify }};
+  const quadrants = {{ site.quadrants | jsonify }};
+
+  create_chart({
+    svg_id: "radar",
+    colors: {
+      background: "#1d1d1d",
+      grid: "#ddd"
+    },
+    quadrants: quadrants,
+    rings: rings,
+    entries: blips,
+  });
+</script>
