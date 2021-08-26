@@ -6,8 +6,13 @@ title: Sample Tech Radar
 </section>
 
 <script type="module">
-  import { create_chart } from 'https://cdn.jsdelivr.net/npm/blips-chart@1.2.0/dist/blips-chart.js';
-  const blips = {{ site.blips | jsonify }};
+  import { create_chart } from 'https://cdn.jsdelivr.net/npm/blips-chart@1.3.0/dist/blips-chart.js';
+  const baseUrl = '{{ baseurl }}';
+  const blips = {{ site.blips | jsonify }}
+    .map(b => {
+      b.url = baseUrl + b.url;
+      return b;
+    });
   const rings = {{ site.rings | jsonify }};
   const quadrants = {{ site.quadrants | jsonify }};
 
