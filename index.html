@@ -1,11 +1,9 @@
 ---
 title: Sample Tech Radar
 ---
-<h1>{{ page.title }}</h1>
-
-<div>
+<section class="box radar-box">
   <svg id="radar"></svg>
-</div>
+</section>
 
 <script type="module">
   import { create_chart } from 'https://cdn.jsdelivr.net/npm/blips-chart@1.2.0/dist/blips-chart.js';
@@ -25,70 +23,83 @@ title: Sample Tech Radar
   });
 </script>
 
-<div class="">
-  <h2>Blips</h2>
-  <table>
-    <thead>
-      <th>
-        Tech
-      </th>
-      <th>
-        Quadrant
-      </th>
-      <th>
-        Ring
-      </th>
-    </thead>
-    <tbody>
-      {% for blip in site.blips %}
-      <tr>
-        <td>
-          <a href="{{ blip.url | relative_url }}">
-            {{ blip.title }}
-          </a>
-        </td>
-        <td>
-          {{ blip.quadrant }}
-        </td>
-        <td>
-          {{ blip.ring }}
-        </td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-</div>
+<section class="box search-box">
+  <h2>Search for blips</h2>
+  <div class="search-bar">
+    <img class="search-icon"
+      src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDU2Ljk2NiA1Ni45NjYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDU2Ljk2NiA1Ni45NjY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPHBhdGggZD0iTTU1LjE0Niw1MS44ODdMNDEuNTg4LDM3Ljc4NmMzLjQ4Ni00LjE0NCw1LjM5Ni05LjM1OCw1LjM5Ni0xNC43ODZjMC0xMi42ODItMTAuMzE4LTIzLTIzLTIzcy0yMywxMC4zMTgtMjMsMjMgIHMxMC4zMTgsMjMsMjMsMjNjNC43NjEsMCw5LjI5OC0xLjQzNiwxMy4xNzctNC4xNjJsMTMuNjYxLDE0LjIwOGMwLjU3MSwwLjU5MywxLjMzOSwwLjkyLDIuMTYyLDAuOTIgIGMwLjc3OSwwLDEuNTE4LTAuMjk3LDIuMDc5LTAuODM3QzU2LjI1NSw1NC45ODIsNTYuMjkzLDUzLjA4LDU1LjE0Niw1MS44ODd6IE0yMy45ODQsNmM5LjM3NCwwLDE3LDcuNjI2LDE3LDE3cy03LjYyNiwxNy0xNywxNyAgcy0xNy03LjYyNi0xNy0xN1MxNC42MSw2LDIzLjk4NCw2eiIgZmlsbD0iIzAwMDAwMCIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" />
+    <input placeholder="Search" type="text">
+    <img class="clear-icon"
+      src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxLjk3NiA1MS45NzYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxLjk3NiA1MS45NzY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPGc+Cgk8cGF0aCBkPSJNNDQuMzczLDcuNjAzYy0xMC4xMzctMTAuMTM3LTI2LjYzMi0xMC4xMzgtMzYuNzcsMGMtMTAuMTM4LDEwLjEzOC0xMC4xMzcsMjYuNjMyLDAsMzYuNzdzMjYuNjMyLDEwLjEzOCwzNi43NywwICAgQzU0LjUxLDM0LjIzNSw1NC41MSwxNy43NCw0NC4zNzMsNy42MDN6IE0zNi4yNDEsMzYuMjQxYy0wLjc4MSwwLjc4MS0yLjA0NywwLjc4MS0yLjgyOCwwbC03LjQyNS03LjQyNWwtNy43NzgsNy43NzggICBjLTAuNzgxLDAuNzgxLTIuMDQ3LDAuNzgxLTIuODI4LDBjLTAuNzgxLTAuNzgxLTAuNzgxLTIuMDQ3LDAtMi44MjhsNy43NzgtNy43NzhsLTcuNDI1LTcuNDI1Yy0wLjc4MS0wLjc4MS0wLjc4MS0yLjA0OCwwLTIuODI4ICAgYzAuNzgxLTAuNzgxLDIuMDQ3LTAuNzgxLDIuODI4LDBsNy40MjUsNy40MjVsNy4wNzEtNy4wNzFjMC43ODEtMC43ODEsMi4wNDctMC43ODEsMi44MjgsMGMwLjc4MSwwLjc4MSwwLjc4MSwyLjA0NywwLDIuODI4ICAgbC03LjA3MSw3LjA3MWw3LjQyNSw3LjQyNUMzNy4wMjIsMzQuMTk0LDM3LjAyMiwzNS40NiwzNi4yNDEsMzYuMjQxeiIgZmlsbD0iIzAwMDAwMCIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
+  </div>
 
-<div class="columns">
-  <div class="alternate1">
-    <h2>Rings</h2>
-    <ul>
-      {% for ring in site.rings %}
-      <li>
-        <h3>
-          {{ ring.name }}
-        </h3>
-        <p>
-          {{ ring.content | markdownify }}
-        </p>
-      </li>
-      {% endfor %}
-    </ul>
+  <div class="search-results">
+
+  </div>
+
+  <div>
+    <a href="{{ '/all-blips.html' | relative_url }}">Show all blips</a>
+  </div>
+</section>
+
+<section class="box">
+  <h2>What is the Tech Radar?</h2>
+  <p>
+    A Tech Radar is a list of technologies, complemented by an assessment result, called ring assignment. We use four
+    rings and four quadrants with the following semantics:
+  </p>
+
+  <div class="columns">
+    <div class="box alternate1">
+      <h2>Rings</h2>
+      <ul>
+        {% for ring in site.rings %}
+        <li>
+          <h3>
+            {{ ring.name }}
+          </h3>
+          <p>
+            {{ ring.content | markdownify }}
+          </p>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  
+    <div class="box alternate2">
+      <h2>Quadrants</h2>
+      <ul>
+        {% for quadrant in site.quadrants %}
+        <li>
+          <h3>
+            {{ quadrant.name }}
+          </h3>
+          <p>
+            {{ quadrant.content | markdownify }}
+          </p>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
   </div>
   
-  <div class="alternate2">
-    <h2>Quadrants</h2>
-    <ul>
-      {% for quadrant in site.quadrants %}
-      <li>
-        <h3>
-          {{ quadrant.name }}
-        </h3>
-        <p>
-          {{ quadrant.content | markdownify }}
-        </p>
-      </li>
-      {% endfor %}
-    </ul>
+  <div>
+    <h2>What is the purpose?</h2>
+    <p>
+      The Tech Radar is a tool to inspire and support developers to pick the best technologies for new
+      projects; it provides a platform to share knowledge and experience in technologies, to reflect on technology
+      decisions and continuously evolve our technology landscape. Based on the pioneering work of <a href="https://www.thoughtworks.com/radar">ThoughtWorks</a> and <a href="https://opensource.zalando.com/tech-radar/">Zalando</a>, our Tech
+      Radar sets out the changes in technologies that are interesting in software development — changes that we think our
+      engineering teams should pay attention to and use in their projects.
+    </p>
+  
+    <h2>How do we maintain it?</h2>
+    <p>
+      The Tech Radar is maintained by a group or Principal Engineers who faciliate and drive the technology selection
+      discussions across the company. Assignment of technologies to rings is the outcome of ring
+      change proposals, which are discussed and voted on. The Tech Radar is open for contribution for all developers
+      and depends on their active participation to share lessons learned, pitfalls, and contribute to
+      good practices on using the technologies.
+    </p>
   </div>
-</div>
+</section>

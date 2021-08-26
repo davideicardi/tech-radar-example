@@ -1,0 +1,36 @@
+---
+title: "All blips"
+---
+<section class="box">
+  <h2>Blips</h2>
+  <table>
+    <thead>
+      <th>
+        Tech
+      </th>
+      <th>
+        Quadrant
+      </th>
+      <th>
+        Ring
+      </th>
+    </thead>
+    <tbody>
+      {% for blip in site.blips %}
+      <tr>
+        <td>
+          <a href="{{ blip.url | relative_url }}">
+            {{ blip.title }}
+          </a>
+        </td>
+        <td>
+          {{ blip.quadrant }}
+        </td>
+        <td>
+          {{ blip.ring }}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
