@@ -6,8 +6,6 @@ website: https://dotnet.microsoft.com/
 moved: 0
 ---
 
-## Description
-
 .NET is a free, cross-platform, open source developer platform for building many different types of applications.
 
 With .NET, you can use multiple languages, editors, and libraries to build for web, mobile, desktop, games, and IoT.

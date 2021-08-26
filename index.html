@@ -1,6 +1,19 @@
 ---
 title: Sample Tech Radar
 ---
+<!-- Initialize data variables, they will be used
+by the radar chart and by the search box -->
+<script type="application/javascript">
+  const baseUrl = '{{ site.baseurl }}';
+  const blips = {{ site.blips | jsonify }}
+    .map(b => {
+      b.url = baseUrl + b.url;
+      return b;
+    });
+  const rings = {{ site.rings | jsonify }};
+  const quadrants = {{ site.quadrants | jsonify }};
+</script>
+
 <section class="box radar-box">
   {% include radar.html %}
 </section>

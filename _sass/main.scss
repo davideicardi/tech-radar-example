@@ -58,7 +58,7 @@ footer {
   justify-content: center;
   > section {
     margin: 0 auto;
-    width: 1024px;
+    max-width: 1024px;
   }
 }
 
@@ -103,11 +103,47 @@ td {
   justify-content: center;
 }
 
+.blip-detail-box {
+  .properties {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    .ring {
+      text-align: left;
+      font-weight: bold;
+      flex: 0.5;
+    }
+    .website {
+      text-align: center;
+      font-size: 0.8em;
+      flex: 1;
+    }
+    .quadrant {
+      text-align: right;
+      flex: 0.5;
+    }
+
+    .ADOPT {
+      color: #f75258;
+    }
+    .ASSESS {
+      color: #5371f7;
+    }
+    .TRIAL {
+      color: #54f6d1;
+    }
+    .HOLD {
+      color: #6f58c4;
+    }
+  }
+}
+
 .search-box {
+  width: 100%;
   .search-bar {
     position: relative;
-    display: flex;
-    width: 100%;
+    margin: 0 auto;
+    width: 80%;
 
     input {
       border: 1px solid grey;
@@ -144,5 +180,13 @@ td {
 
   .search-results {
     min-height: 50px;
+    li {
+      line-height: 2em;
+    }
+  }
+
+  .search-tools {
+    display: flex;
+    justify-content: center;
   }
 }

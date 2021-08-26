@@ -1,13 +1,16 @@
 ---
 layout: default
 ---
-<section class="box">
+<section class="box blip-detail-box">
+
+    <div class="properties">
+        <span class="ring {{ page.ring }}">{{ page.ring }}</span>
+        <span class="website"><a href="{{ page.website }}">{{ page.website }}</a></span>
+        <span class="quadrant">{{ page.quadrant }}</span>
+    </div>
+
     <h2>{{ page.title }}</h2>
-    <ul>
-        <li>Ring: {{ page.ring }}</li>
-        <li>Quadrant: {{ page.quadrant }}</li>
-        <li>Website: <a href="{{ page.website }}">{{ page.website }}</a></li>
-    </ul>
-    
+
     {{ content }}
+
 </section>
