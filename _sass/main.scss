@@ -31,7 +31,7 @@ h2 {
   color: #54f6d1;
 }
 h3 {
-  font-size: 1.2em;
+  font-size: 1em;
   color: #54f6d1;
 }
 
@@ -66,6 +66,8 @@ footer {
   flex-direction: row;
   > div {
     flex: 1;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
   }
 }
 
@@ -74,14 +76,6 @@ footer {
   h2 {
     text-align: center;
   }
-}
-
-.alternate1 {
-  background-color: #5371f7;
-}
-
-.alternate2 {
-  background-color: #f75258;
 }
 
 table {
