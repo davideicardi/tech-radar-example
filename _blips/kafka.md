@@ -1,6 +1,6 @@
 ---
 title: Apache Kafka
-quadrant: PLATFORMS
+quadrant: DATA
 ring: TRIAL
 website: https://kafka.apache.org/
 moved: 1
