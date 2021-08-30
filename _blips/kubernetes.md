@@ -1,5 +1,5 @@
 ---
-title: Kubernetes
+title: K8s
 quadrant: PLATFORMS
 ring: ADOPT
 website: https://kubernetes.io/

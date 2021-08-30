@@ -1,5 +1,5 @@
 ---
-title: Apache Kafka
+title: Kafka
 quadrant: DATA
 ring: TRIAL
 website: https://kafka.apache.org/
