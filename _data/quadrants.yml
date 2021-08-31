@@ -1,0 +1,24 @@
+-
+  name: "DATA"
+  title: "Datastores & Data Management"
+  text_color: "#ddd"
+  content: |
+    Databases, messaging systems, data managements tools and any data centric components.
+-
+  name: "PLATFORMS"
+  title: "Platforms & Infrastructure"
+  text_color: "#ddd"
+  content: |
+    Things that we build software on top of such as mobile technologies like Kubernetes, Clouds, virtual platforms (Android, JVM) and other tools used for the infrastructure.
+-
+  name: "PATTERNS"
+  title: "Patterns & Techniques"
+  text_color: "#ddd"
+  content: |
+    Software development process, design patterns and techniques for structuring software.
+-
+  name: "LANGUAGES"
+  title: "Languages & Frameworks"
+  text_color: "#ddd"
+  content: |
+    Programming languages, frameworks, libraries and related components.

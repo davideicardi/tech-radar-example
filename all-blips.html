@@ -16,7 +16,8 @@ title: "All blips"
       </th>
     </thead>
     <tbody>
-      {% for blip in site.blips %}
+      {% assign blips = site.blips | sort: 'title' %}
+      {% for blip in blips %}
       <tr>
         <td>
           <a href="{{ blip.url | relative_url }}">

@@ -3,10 +3,6 @@ title: "Sample Tech Radar"
 collections:
   blips:
     output: true
-  rings:
-    sort_by: index
-  quadrants:
-    sort_by: index
 
 defaults:
   - scope:
@@ -14,6 +10,8 @@ defaults:
       type: "blips"
     values:
       layout: "blip"
+      areas: []
+      moved: 0
   - scope:
       path: ""
     values:

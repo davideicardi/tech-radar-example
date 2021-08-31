@@ -10,8 +10,8 @@ by the radar chart and by the search box -->
       b.url = baseUrl + b.url;
       return b;
     });
-  const rings = {{ site.rings | jsonify }};
-  const quadrants = {{ site.quadrants | jsonify }};
+  const rings = {{ site.data.rings | jsonify }};
+  const quadrants = {{ site.data.quadrants | jsonify }};
 </script>
 
 <section class="box radar-box">
