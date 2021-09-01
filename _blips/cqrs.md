@@ -1,5 +1,6 @@
 ---
 title: CQRS
+longTitle: Command and Query Responsibility Segregation
 quadrant: PATTERNS
 ring: ADOPT
 website: https://www.martinfowler.com/bliki/CQRS.html

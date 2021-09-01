@@ -11,8 +11,7 @@
 </div>
 
 <div class="categories">
-  <ul class="cloud">
-    <li>categories:</li>
+  <ul>
     {% assign categories = site.blips | map: 'categories' | uniq | sort %}
     {% for category in categories %}
     <li>

@@ -1,26 +1,28 @@
 ---
 layout: default
 ---
-<section class="box blip-detail-box">
+<section class="page">
 
-    <div class="properties">
-        <span class="ring {{ page.ring }}">{{ page.ring }}</span>
-        <span class="website"><a href="{{ page.website }}">{{ page.website }}</a></span>
-        <span class="quadrant">{{ page.quadrant }}</span>
-    </div>
-
-    <h2>{{ page.title }}</h2>
+    <h3 class="ring-{{ page.ring }}">{{ page.ring }}</h3>
+    <h2>{{ page.longTitle }}</h2>
 
     {{ content }}
 
-    <div class="categories">
-        <ul class="cloud">
-            <li>categories:</li>
-            {% for category in page.categories %}
-            <li>
-                <a href="{{ '/categories/' | append: category | relative_url }}">{{ category }}</a>
-            </li>
-            {% endfor %}
-        </ul>
+    <div class="properties">
+        <div class="website"><a href="{{ page.website }}">Website</a></div>
+        <div class="categories">
+            <span>categories:</span>
+            <ul>
+                {% for category in page.categories %}
+                <li>
+                    <a href="{{ '/categories/' | append: category | relative_url }}">{{ category }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="quadrant">
+            quadrant:
+            {{ page.quadrant }}
+        </div>
     </div>
 </section>

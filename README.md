@@ -27,10 +27,12 @@ Each blip is composed by a markdown file with the following structure:
 ```
 ---
 title: MongoDb                      # Name of the technology
+longTitle: MongoDb                  # optional
 quadrant: DATA                      # DATA, PLATFORMS, PATTERNS or LANGUAGES
 ring: ADOPT                         # HOLD, ASSESS, TRIAL or ADOPT
 website: https://www.mongodb.com/   # official website
-moved: 0                            # 0=not moved, 1=moved up, -1=moved down
+moved: 0                            # 0=not moved (default), 1=moved up, -1=moved down
+categories: [database]              # list of categories
 ---
 
 some description

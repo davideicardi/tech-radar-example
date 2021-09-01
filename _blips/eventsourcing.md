@@ -1,5 +1,6 @@
 ---
 title: ES
+longTitle: Event Sourcing
 quadrant: PATTERNS
 ring: ADOPT
 website: https://martinfowler.com/eaaDev/EventSourcing.html

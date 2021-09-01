@@ -1,5 +1,6 @@
 ---
 title: JS
+longTitle: Javascript
 quadrant: LANGUAGES
 ring: ADOPT
 website: https://www.ecma-international.org/publications-and-standards/standards/ecma-262/
