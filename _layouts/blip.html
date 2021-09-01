@@ -13,4 +13,14 @@ layout: default
 
     {{ content }}
 
+    <div class="categories">
+        <ul class="cloud">
+            <li>categories:</li>
+            {% for category in page.categories %}
+            <li>
+                <a href="{{ '/categories/' | append: category | relative_url }}">{{ category }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
 </section>

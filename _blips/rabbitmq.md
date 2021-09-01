@@ -4,6 +4,7 @@ quadrant: DATA
 ring: ADOPT
 website: https://www.rabbitmq.com/
 moved: 0
+categories: [message-bus]
 ---
 
 With tens of thousands of users, RabbitMQ is one of the most popular open source message brokers.

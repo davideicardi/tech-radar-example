@@ -1,8 +1,0 @@
-
-<h2>Areas</h2>
-<ul class="cloud">
-    {% assign areas = site.blips | map: 'areas' | uniq | sort %}
-    {% for area in areas %}
-    <li><a data-weight="4" href="{{ '/all-blips?area=' | append: area | relative_url }}">{{ area }}</a></li>
-    {% endfor %}
-</ul>

@@ -4,7 +4,7 @@ quadrant: LANGUAGES
 ring: ADOPT
 moved: 0
 website: https://reactjs.org/
-areas: [web, ui]
+categories: [web, ui]
 ---
 
 React is a JavaScript library for building user interfaces.

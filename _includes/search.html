@@ -10,8 +10,16 @@
   </ul>
 </div>
 
-<div class="search-areas">
-  {% include areas.html %}
+<div class="categories">
+  <ul class="cloud">
+    <li>categories:</li>
+    {% assign categories = site.blips | map: 'categories' | uniq | sort %}
+    {% for category in categories %}
+    <li>
+        <a href="{{ '/categories/' | append: category | relative_url }}">{{ category }}</a>
+    </li>
+    {% endfor %}
+  </ul>
 </div>
 <div class="search-tools">
   <a href="{{ '/all-blips.html' | relative_url }}">Show all</a>
@@ -32,8 +40,8 @@
 
   searchBar.addEventListener("keyup", (e) => {
     const searchValue = e.target.value.toLowerCase();
+    searchResults.innerHTML = "";
     if (searchValue.length > 2) {
-      searchResults.innerHTML = "";
       const exactMatches = blips
         .filter(b => b.title && b.title.toLowerCase().includes(searchValue));
       for (const blip of exactMatches) {
@@ -44,6 +52,12 @@
         .filter(b => !exactMatches.includes(b));
       for (const blip of partialMatches) {
         addBlipResult(blip);
+      }
+
+      if (exactMatches.length == 0 && partialMatches.length == 0) {
+        const noResultsElement = document.createElement("li")
+        noResultsElement.innerText = "no results";
+        searchResults.appendChild(noResultsElement);
       }
     }
   })

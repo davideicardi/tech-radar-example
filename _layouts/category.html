@@ -1,0 +1,39 @@
+---
+layout: default
+---
+<section class="box category-box">
+
+    <h2>{{ page.category | capitalize }}</h2>
+
+    <table>
+    <thead>
+        <th>
+        Tech
+        </th>
+        <th>
+        Quadrant
+        </th>
+        <th>
+        Ring
+        </th>
+    </thead>
+    <tbody>
+        {% for blip in site.blips %} {% if blip.categories contains page.category %}
+        <tr>
+        <td>
+            <a href="{{ blip.url | relative_url }}">
+            {{ blip.title }}
+            </a>
+        </td>
+        <td>
+            {{ blip.quadrant }}
+        </td>
+        <td>
+            {{ blip.ring }}
+        </td>
+        </tr>
+        {% endif %} {% endfor %}
+    </tbody>
+    </table>
+
+</section>

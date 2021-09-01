@@ -10,7 +10,7 @@ defaults:
       type: "blips"
     values:
       layout: "blip"
-      areas: []
+      categories: []
       moved: 0
   - scope:
       path: ""
