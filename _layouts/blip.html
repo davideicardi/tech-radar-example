@@ -4,12 +4,21 @@ layout: default
 <section class="page">
 
     <h3 class="ring-{{ page.ring }}">{{ page.ring }}</h3>
-    <h2>{{ page.longTitle }}</h2>
+    <h2>
+        {% if page.longTitle %}
+            {{ page.longTitle }}
+        {% else %}
+            {{ page.title }}
+        {% endif %}
+    </h2>
 
     {{ content }}
 
     <div class="properties">
-        <div class="website"><a href="{{ page.website }}">Website</a></div>
+        <div class="website">
+            <span>website:</span>
+            <a href="{{ page.website }}">{{ page.website }}</a>
+        </div>
         <div class="categories">
             <span>categories:</span>
             <ul>
@@ -22,7 +31,8 @@ layout: default
         </div>
         <div class="quadrant">
             quadrant:
-            {{ page.quadrant }}
+            {% assign quadrant = site.data.quadrants | where:"name", page.quadrant | first %}
+            {{ quadrant.title }}
         </div>
     </div>
 </section>
