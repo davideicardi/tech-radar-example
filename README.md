@@ -11,13 +11,16 @@ This projects is based on the pioneering work of [ThoughtWorks](https://www.thou
 the open source project of [Zalando](https://opensource.zalando.com/tech-radar/).
 
 All data are handled using [Jekyll collections](https://jekyllrb.com/docs/collections/).
-There are 3 collections:
 
-- `quadrants`: list of quadrants inside the radar (must be 4), see `_quadrants`
-- `rings`: list of rings inside the radar (must be 4), see `_rings`
-- `blips`: list of technologies, see `_blips`
+The following data are handled:
 
-All data are stored as html or markdown files, no database.
+- `quadrants`: list of quadrants inside the radar (must be 4), see `_data/quadrants.yml`.
+- `rings`: list of rings inside the radar (must be 4), see `_data/.rings.yml`
+- `blips`: list of technologies, see `_blips/`
+- `categories`: list of categories, generated automatically from blips
+- `testimonials`: list of projects that make use of a technology
+
+All data are stored as html or markdown files, no database is required.
 
 ## Adding and updating content
 
@@ -30,12 +33,14 @@ title: MongoDb                      # Name of the technology
 longTitle: MongoDb                  # optional
 quadrant: DATA                      # DATA, PLATFORMS, PATTERNS or LANGUAGES
 ring: ADOPT                         # HOLD, ASSESS, TRIAL or ADOPT
-website: https://www.mongodb.com/   # official website
-moved: 0                            # 0=not moved (default), 1=moved up, -1=moved down
-categories: [database]              # list of categories
+website: https://www.mongodb.com/   # official website, optional
+moved: 0                            # 0=not moved (default), 1=moved up, -1=moved down, optional
+categories: [database]              # list of categories, optional
+testimonials: [project1]            # list of testimonials, optional
 ---
 
 some description
+
 ```
 
 ## Requirements
