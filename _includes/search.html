@@ -11,11 +11,22 @@
 </div>
 
 <div class="categories">
+  By category: 
   <ul>
     {% assign categories = site.blips | map: 'categories' | uniq | sort %}
     {% for category in categories %}
     <li>
         <a href="{{ '/categories/' | append: category | relative_url }}">{{ category }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+<div class="testimonials">
+  Testimonials: 
+  <ul>
+    {% for testimonial in site.testimonials %}
+    <li>
+        <a href="{{ testimonial.url | relative_url }}">{{ testimonial.title }}</a>
     </li>
     {% endfor %}
   </ul>

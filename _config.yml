@@ -3,6 +3,8 @@ title: "Sample Tech Radar"
 collections:
   blips:
     output: true
+  testimonials:
+    output: true
 
 defaults:
   - scope:
@@ -11,7 +13,13 @@ defaults:
     values:
       layout: "blip"
       categories: []
+      testimonials: []
       moved: 0
+  - scope:
+      path: ""
+      type: "testimonials"
+    values:
+      layout: "testimonial"
   - scope:
       path: ""
     values:

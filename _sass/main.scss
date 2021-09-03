@@ -58,19 +58,13 @@ h3 {
 }
 
 p {
-  line-height: 1.5em;
+  line-height: 1.4em;
+  margin-block-start: 0.2em;
+  margin-block-end: 0.5em;
 }
 
 strong {
   font-weight: bold;
-}
-
-header {
-  padding: 0.5em;
-}
-
-footer {
-  margin: 0 auto;
 }
 
 .container {
@@ -80,6 +74,14 @@ footer {
   > section {
     margin: 0 auto;
     max-width: 1024px;
+  }
+
+  header {
+    padding: 0.5em;
+  }
+  
+  footer {
+    margin: 0.5em auto;
   }
 }
 
@@ -110,13 +112,12 @@ table {
     text-align: left;
     color: #54f6d1;
   }
-}
 
-table,
-th,
-td {
-  border: 1px solid #ddd;
-  padding: 0.5em;
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 0.5em;
+  }
 }
 
 .radar-box {
@@ -126,27 +127,48 @@ td {
 }
 
 .page {
-  h2, h3 {
+  header {
     text-align: center;
   }
 
-  .properties {
+  h3 {
+    padding-left: 0.2em;
+    + *, & {
+      border-left: 1px solid #009688;
+    }
+    + * {
+      padding-left: 1em;
+    }
+  }
+
+  footer {
     margin-top: 1em;
     font-size: 0.8em;
+
+    ul {
+      dt {
+        display: inline;
+        &::after {
+          content: ":";
+        }
+      }
+    }
   }
 }
 
-.ring-ADOPT {
-  color: #f75258;
-}
-.ring-ASSESS {
-  color: #5371f7;
-}
-.ring-TRIAL {
-  color: #54f6d1;
-}
-.ring-HOLD {
-  color: #6f58c4;
+.ring {
+  &-ADOPT {
+    color: #f75258;
+  }
+  &-ASSESS {
+    color: #5371f7;
+  }
+  &-TRIAL {
+    color: #54f6d1;
+  }
+  &-HOLD {
+    color: #6f58c4;
+  }
 }
 
 .search-box {
@@ -193,23 +215,42 @@ td {
     }
   }
 
+  .testimonials {
+    font-size: 0.8em;
+    text-align: center;
+    ul {
+      display: inline;
+      li {
+        display: inline;
+        padding: 0.125em 0.25em;
+      }
+    }
+  }
+
   .categories {
     font-size: 0.8em;
     text-align: center;
+    ul {
+      display: inline;
+      li {
+        display: inline;
+        padding: 0.125em 0.25em;
+      }
+    }
   }
 
   .search-tools {
+    margin-top: 0.5em;
     display: flex;
     justify-content: center;
   }
+
 }
 
-.categories {
-  ul {
+ul.inline-list {
+  display: inline;
+  li {
     display: inline;
-    li {
-      display: inline;
-      padding: 0.125em 0.25em;
-    }
+    padding: 0.125em 0.25em;
   }
 }
