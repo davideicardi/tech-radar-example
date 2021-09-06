@@ -3,43 +3,45 @@ layout: default
 ---
 <section class="page">
 
-    <header>
-        <h2>
-            {{ page.title }}
-        </h2>
-    </header>
+  <header>
+    <h2>
+      {{ page.title }}
+    </h2>
+  </header>
 
-    {{ content }}
+  {{ content }}
 
-    <table>
+  <table>
     <thead>
-        <th>
+      <th>
         Tech
-        </th>
-        <th>
+      </th>
+      <th>
         Quadrant
-        </th>
-        <th>
+      </th>
+      <th>
         Ring
-        </th>
+      </th>
     </thead>
     <tbody>
-        {% assign blips = site.blips | sort: 'title' %}
-        {% for blip in blips %} {% if blip.testimonials contains page.slug %}
-        <tr>
+      {% assign blips = site.blips | sort: 'title' %}
+      {% for blip in blips %} {% if blip.testimonials contains page.slug %}
+      <tr>
         <td>
-            <a href="{{ blip.url | relative_url }}">
+          <a href="{{ blip.url | relative_url }}">
             {{ blip.title }}
-            </a>
+          </a>
         </td>
         <td>
-            {{ blip.quadrant }}
+          {{ blip.quadrant }}
         </td>
         <td>
+          <span class="ring-{{ blip.ring }}">
             {{ blip.ring }}
+          </span>
         </td>
-        </tr>
-        {% endif %} {% endfor %}
+      </tr>
+      {% endif %} {% endfor %}
     </tbody>
-    </table>
+  </table>
 </section>

@@ -28,7 +28,9 @@ title: "All blips"
           {{ blip.quadrant }}
         </td>
         <td>
-          {{ blip.ring }}
+          <span class="ring-{{ blip.ring }}">
+            {{ blip.ring }}
+          </span>
         </td>
       </tr>
       {% endfor %}

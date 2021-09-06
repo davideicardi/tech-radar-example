@@ -3,54 +3,54 @@ layout: default
 ---
 <section class="page">
 
-    <header>
-        <span class="ring-{{ page.ring }}">{{ page.ring }}</span>
-        <h2>
-            {% if page.longTitle %}
-                {{ page.longTitle }}
-            {% else %}
-                {{ page.title }}
-            {% endif %}
-        </h2>
-    </header>
+  <header>
+    <span class="ring-{{ page.ring }}">{{ page.ring }}</span>
+    <h2>
+      {% if page.longTitle %}
+      {{ page.longTitle }}
+      {% else %}
+      {{ page.title }}
+      {% endif %}
+    </h2>
+  </header>
 
-    {{ content }}
+  {{ content }}
 
-    <footer>
-        <ul>
-            <li>
-                <dt>website</dt>
-                <a href="{{ page.website }}">{{ page.website }}</a>
-            </li>
+  <footer>
+    <ul>
+      <li>
+        <dt>website</dt>
+        <a href="{{ page.website }}">{{ page.website }}</a>
+      </li>
 
-            <li>
-                <dt>categories</dt>
-                <ul class="inline-list">
-                    {% for category in page.categories %}
-                    <li>
-                        <a href="{{ '/categories/' | append: category | relative_url }}">{{ category }}</a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </li>
-
-            <li>
-                <dt>quadrant</dt>
-                {% assign quadrant = site.data.quadrants | where:"name", page.quadrant | first %}
-                {{ quadrant.title }}
-            </li>
-
-            <li>
-                <dt>testimonials</dt>
-                <ul class="inline-list">
-                    {% for testimonial in page.testimonials %}
-                    <li>
-                        {% assign testimonialObj = site.testimonials | where:"slug", testimonial | first %}
-                        <a href="{{ '/testimonials/' | append: testimonial | relative_url }}">{{ testimonialObj.title }}</a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </li>
+      <li>
+        <dt>categories</dt>
+        <ul class="inline-list">
+          {% for category in page.categories %}
+          <li>
+            <a href="{{ '/categories/' | append: category | relative_url }}">{{ category }}</a>
+          </li>
+          {% endfor %}
         </ul>
-    </footer>
+      </li>
+
+      <li>
+        <dt>quadrant</dt>
+        {% assign quadrant = site.data.quadrants | where:"name", page.quadrant | first %}
+        {{ quadrant.title }}
+      </li>
+
+      <li>
+        <dt>testimonials</dt>
+        <ul class="inline-list">
+          {% for testimonial in page.testimonials %}
+          <li>
+            {% assign testimonialObj = site.testimonials | where:"slug", testimonial | first %}
+            <a href="{{ '/testimonials/' | append: testimonial | relative_url }}">{{ testimonialObj.title }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </li>
+    </ul>
+  </footer>
 </section>
