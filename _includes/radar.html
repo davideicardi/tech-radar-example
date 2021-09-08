@@ -1,7 +1,24 @@
+<div class="stack">
+  <select id="stack" name="title" title="filter by tech stack">
+    <option value="" selected>all</option>
+
+    {% assign stacks = site.blips | map: 'stack' | uniq | sort %}
+    {% for stack in stacks %}
+    <option value="{{ stack }}">{{ stack }}</option>
+    {% endfor %}
+  </select>
+</div>
+
 <svg id="radar" version="1.1" width="850" height="850" viewBox="0 0 850 850"></svg>
 
 <script type="module">
   import { create_chart } from 'https://cdn.jsdelivr.net/npm/blips-chart@1.7.0/dist/blips-chart.js';
+
+  // const entries = blips;
+  //   .filter(b => {
+  //     return b.stack.includes("graphics");
+  //   });
+
   create_chart({
     svg_id: "radar",
     colors: {
