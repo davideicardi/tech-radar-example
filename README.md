@@ -45,17 +45,19 @@ some description
 
 ## Requirements
 
-- Ruby version 2.5.0
+- Ruby version 2.5.0 or higher and ruby bundler (see [Installation instructions](https://jekyllrb.com/docs/installation/))
 
 ## Build
 
 ```
+bundle install
 bundle exec jekyll build
 ```
 
 ## Development
 
 ```
+bundle install
 bundle exec jekyll serve --livereload
 ```
 
