@@ -5,6 +5,8 @@ ring: HOLD
 website: https://www.microsoft.com/en-us/sql-server
 moved: -1
 categories: [database]
+testimonials: []
+stack: [web]
 ---
 
 Microsoft SQL Server is a relational database management system developed by Microsoft.

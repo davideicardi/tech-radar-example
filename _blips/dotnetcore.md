@@ -6,6 +6,8 @@ website: https://dotnet.microsoft.com/
 moved: 0
 categories: [language]
 testimonials: [project1, project2]
+stack: [web]
+version: 5
 ---
 
 .NET is a free, cross-platform, open source developer platform for building many different types of applications.

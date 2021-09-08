@@ -37,6 +37,8 @@ website: https://www.mongodb.com/   # official website, optional
 moved: 0                            # 0=not moved (default), 1=moved up, -1=moved down, optional
 categories: [database]              # list of categories, optional
 testimonials: [project1]            # list of testimonials, optional
+stack: [web]                        # list of stack in which this technology is used, optional
+version: 1.0                        # version, optional
 ---
 
 some description

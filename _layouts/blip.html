@@ -12,6 +12,9 @@ layout: default
       {{ page.title }}
       {% endif %}
     </h2>
+    {% if page.version %}
+      <span class="version">Version {{ page.version }}</span>
+    {% endif %}
   </header>
 
   {{ content }}

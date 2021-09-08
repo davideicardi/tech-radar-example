@@ -6,6 +6,7 @@ website: https://www.rabbitmq.com/
 moved: 0
 categories: [message-bus]
 testimonials: [project1]
+stack: [web]
 ---
 
 With tens of thousands of users, RabbitMQ is one of the most popular open source message brokers.
