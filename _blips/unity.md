@@ -1,5 +1,5 @@
 ---
-title: Unitys
+title: Unity
 quadrant: PLATFORMS
 ring: ADOPT
 website: https://unity.com/
