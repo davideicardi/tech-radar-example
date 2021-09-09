@@ -1,59 +1,61 @@
-<div class="box">
-    <h2>What is the Tech Radar?</h2>
+<section class="box whatis-box">
+  <div class="box">
+      <h2>What is the Tech Radar?</h2>
+      <p>
+        A Tech Radar is a list of technologies, complemented by an assessment result, called ring assignment. We use four
+        rings and four quadrants with the following semantics:
+      </p>
+  </div>
+
+  <div class="columns">
+    <div class="box">
+      <h2>Rings</h2>
+      <ul>
+        {% for ring in site.data.rings %}
+        <li>
+          <h3>
+            {{ ring.name }}
+          </h3>
+          {{ ring.content | markdownify }}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="box">
+      <h2>Quadrants</h2>
+      <ul>
+        {% for quadrant in site.data.quadrants %}
+        <li>
+          <h3>
+            {{ quadrant.name }}
+          </h3>
+          {{ quadrant.content | markdownify }}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <div class="box">
+    <h2>What is the purpose?</h2>
     <p>
-      A Tech Radar is a list of technologies, complemented by an assessment result, called ring assignment. We use four
-      rings and four quadrants with the following semantics:
+      The Tech Radar is a tool to inspire and support developers to pick the best technologies for new
+      projects; it provides a platform to share knowledge and experience in technologies, to reflect on technology
+      decisions and continuously evolve our technology landscape.
+      Based on the pioneering work of <a href="https://www.thoughtworks.com/radar">ThoughtWorks</a> and
+      the open source project of <a href="https://opensource.zalando.com/tech-radar/">Zalando</a>, our Tech
+      Radar sets out the changes in technologies that are interesting in software development — changes that we think our
+      engineering teams should pay attention to and use in their projects.
     </p>
-</div>
 
-<div class="columns">
-  <div class="box">
-    <h2>Rings</h2>
-    <ul>
-      {% for ring in site.data.rings %}
-      <li>
-        <h3>
-          {{ ring.name }}
-        </h3>
-        {{ ring.content | markdownify }}
-      </li>
-      {% endfor %}
-    </ul>
+    <h2>How do we maintain it?</h2>
+    <p>
+      The Tech Radar is maintained by a group of architects who faciliate and drive the technology selection
+      and discussion across the company. Assignment of technologies to rings is the outcome of ring
+      change proposals, which are discussed and voted on. The Tech Radar is open for contribution for all developers
+      and depends on their active participation to share lessons learned, pitfalls, and contribute to
+      good practices on using the technologies.
+    </p>
   </div>
-
-  <div class="box">
-    <h2>Quadrants</h2>
-    <ul>
-      {% for quadrant in site.data.quadrants %}
-      <li>
-        <h3>
-          {{ quadrant.name }}
-        </h3>
-        {{ quadrant.content | markdownify }}
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-</div>
-
-<div class="box">
-  <h2>What is the purpose?</h2>
-  <p>
-    The Tech Radar is a tool to inspire and support developers to pick the best technologies for new
-    projects; it provides a platform to share knowledge and experience in technologies, to reflect on technology
-    decisions and continuously evolve our technology landscape.
-    Based on the pioneering work of <a href="https://www.thoughtworks.com/radar">ThoughtWorks</a> and
-    the open source project of <a href="https://opensource.zalando.com/tech-radar/">Zalando</a>, our Tech
-    Radar sets out the changes in technologies that are interesting in software development — changes that we think our
-    engineering teams should pay attention to and use in their projects.
-  </p>
-
-  <h2>How do we maintain it?</h2>
-  <p>
-    The Tech Radar is maintained by a group of architects who faciliate and drive the technology selection
-    and discussion across the company. Assignment of technologies to rings is the outcome of ring
-    change proposals, which are discussed and voted on. The Tech Radar is open for contribution for all developers
-    and depends on their active participation to share lessons learned, pitfalls, and contribute to
-    good practices on using the technologies.
-  </p>
-</div>
+</section>

@@ -1,18 +1,17 @@
-//Large Screen
+/* Common styles */
+
 @mixin l-screen{
   @media screen and (min-width: 1024px) {
       @content;
   }
 }
 
-//Medium Screen
 @mixin m-screen{
   @media screen and (min-width: 767px) {
       @content;
   }
 }
 
-// Small Screen
 @mixin s-screen{
   @media screen and (max-width: 575px) {
       @content;
@@ -60,6 +59,35 @@ strong {
   font-weight: bold;
 }
 
+input, select {
+  border: 2px solid grey;
+  border-radius: 5px;
+  outline: 0;
+  background-color: #f5f5f5;
+
+  &:hover,
+  &:focus {
+    border: 2px solid #009688;
+    background-color: white;
+  }
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  th {
+    text-align: left;
+    color: #54f6d1;
+  }
+
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 0.5em;
+  }
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -98,18 +126,26 @@ strong {
   }
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  th {
-    text-align: left;
-    color: #54f6d1;
+ul.inline-list {
+  display: inline;
+  li {
+    display: inline;
+    padding: 0.125em 0.25em;
   }
+}
 
-  th,
-  td {
-    border: 1px solid #ddd;
-    padding: 0.5em;
+
+/* Specific styles */
+
+.stacks-box {
+  text-align: center;
+  .selected {
+    background-color: #54f6d1;
+    border-radius: 5px;
+    a {
+      color: #1d1d1d;
+      text-decoration: none;
+    }
   }
 }
 
@@ -123,6 +159,9 @@ table {
     select {
       min-width: 20%;
     }
+  }
+  .legend {
+    font-size: 0.7em;
   }
 }
 
@@ -174,20 +213,6 @@ table {
   }
 }
 
-input, select {
-  border: 2px solid grey;
-  border-radius: 5px;
-  outline: 0;
-  background-color: #f5f5f5;
-
-  &:hover,
-  &:focus {
-    border: 2px solid #009688;
-    background-color: white;
-  }
-
-}
-
 .search-box {
   min-width: 300px;
 
@@ -225,25 +250,11 @@ input, select {
   .testimonials {
     font-size: 0.8em;
     text-align: center;
-    ul {
-      display: inline;
-      li {
-        display: inline;
-        padding: 0.125em 0.25em;
-      }
-    }
   }
 
   .categories {
     font-size: 0.8em;
     text-align: center;
-    ul {
-      display: inline;
-      li {
-        display: inline;
-        padding: 0.125em 0.25em;
-      }
-    }
   }
 
   .search-tools {
@@ -252,12 +263,4 @@ input, select {
     justify-content: center;
   }
 
-}
-
-ul.inline-list {
-  display: inline;
-  li {
-    display: inline;
-    padding: 0.125em 0.25em;
-  }
 }

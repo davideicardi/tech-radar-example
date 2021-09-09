@@ -1,74 +1,76 @@
-<h2>Search</h2>
-<!-- Code base on https://www.mikedane.com/web-development/css/styling-search-bar/ -->
-<div class="search-bar">
-  <input placeholder="Search" type="text">
-</div>
+<section class="box search-box">
+  <h2>Search</h2>
+  <!-- Code base on https://www.mikedane.com/web-development/css/styling-search-bar/ -->
+  <div class="search-bar">
+    <input placeholder="Search" type="text">
+  </div>
 
-<div class="search-results">
-  <ul>
+  <div class="search-results">
+    <ul>
 
-  </ul>
-</div>
+    </ul>
+  </div>
 
-<div class="categories">
-  By category: 
-  <ul>
-    {% assign categories = site.blips | map: 'categories' | uniq | sort %}
-    {% for category in categories %}
-    <li>
-        <a href="{{ '/categories/' | append: category | relative_url }}">{{ category }}</a>
-    </li>
-    {% endfor %}
-  </ul>
-</div>
-<div class="testimonials">
-  By testimonial: 
-  <ul>
-    {% for testimonial in site.testimonials %}
-    <li>
-        <a href="{{ testimonial.url | relative_url }}">{{ testimonial.title }}</a>
-    </li>
-    {% endfor %}
-  </ul>
-</div>
-<div class="search-tools">
-  <a href="{{ '/all-blips.html' | relative_url }}">Show all</a>
-</div>
+  <div class="categories">
+    By category: 
+    <ul class="inline-list">
+      {% assign categories = site.blips | map: 'categories' | uniq | sort %}
+      {% for category in categories %}
+      <li>
+          <a href="{{ '/categories/' | append: category | relative_url }}">{{ category }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="testimonials">
+    By testimonial: 
+    <ul class="inline-list">
+      {% for testimonial in site.testimonials %}
+      <li>
+          <a href="{{ testimonial.url | relative_url }}">{{ testimonial.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="search-tools">
+    <a href="{{ '/all-blips.html' | relative_url }}">Show all</a>
+  </div>
 
-<script type="text/javascript">
-  const searchBar = document.querySelector("div.search-bar input");
-  const searchResults = document.querySelector("div.search-results ul");
+  <script type="text/javascript">
+    const searchBar = document.querySelector("div.search-bar input");
+    const searchResults = document.querySelector("div.search-results ul");
 
-  function addBlipResult(blip) {
-    const newElement = document.createElement("li");
-    const newElementLink = document.createElement("a");
-    newElementLink.href = blip.url;
-    newElementLink.innerText = `${blip.title} (${blip.ring})`;
-    newElement.appendChild(newElementLink);
-    searchResults.appendChild(newElement);
-  }
-
-  searchBar.addEventListener("keyup", (e) => {
-    const searchValue = e.target.value.toLowerCase();
-    searchResults.innerHTML = "";
-    if (searchValue.length > 2) {
-      const exactMatches = blips
-        .filter(b => b.title && b.title.toLowerCase().includes(searchValue));
-      for (const blip of exactMatches) {
-        addBlipResult(blip);
-      }
-      const partialMatches = blips
-        .filter(b => b.content && b.content.toLowerCase().includes(searchValue))
-        .filter(b => !exactMatches.includes(b));
-      for (const blip of partialMatches) {
-        addBlipResult(blip);
-      }
-
-      if (exactMatches.length == 0 && partialMatches.length == 0) {
-        const noResultsElement = document.createElement("li")
-        noResultsElement.innerText = "no results";
-        searchResults.appendChild(noResultsElement);
-      }
+    function addBlipResult(blip) {
+      const newElement = document.createElement("li");
+      const newElementLink = document.createElement("a");
+      newElementLink.href = blip.url;
+      newElementLink.innerText = `${blip.title} (${blip.ring})`;
+      newElement.appendChild(newElementLink);
+      searchResults.appendChild(newElement);
     }
-  })
-</script>
+
+    searchBar.addEventListener("keyup", (e) => {
+      const searchValue = e.target.value.toLowerCase();
+      searchResults.innerHTML = "";
+      if (searchValue.length > 2) {
+        const exactMatches = blips
+          .filter(b => b.title && b.title.toLowerCase().includes(searchValue));
+        for (const blip of exactMatches) {
+          addBlipResult(blip);
+        }
+        const partialMatches = blips
+          .filter(b => b.content && b.content.toLowerCase().includes(searchValue))
+          .filter(b => !exactMatches.includes(b));
+        for (const blip of partialMatches) {
+          addBlipResult(blip);
+        }
+
+        if (exactMatches.length == 0 && partialMatches.length == 0) {
+          const noResultsElement = document.createElement("li")
+          noResultsElement.innerText = "no results";
+          searchResults.appendChild(noResultsElement);
+        }
+      }
+    })
+  </script>
+</section>

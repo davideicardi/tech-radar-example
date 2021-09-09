@@ -1,34 +1,8 @@
-<div class="stack">
-  Stack: 
-  <select id="stack" name="title" title="filter by tech stack">
-    <option value="" selected>all</option>
+<section class="box radar-box">
+  <svg id="radar" version="1.1" width="850" height="850" viewBox="0 0 850 850"></svg>
 
-    {% assign stacks = site.blips | map: 'stack' | uniq | sort %}
-    {% for stack in stacks %}
-    <option value="{{ stack }}">{{ stack }}</option>
-    {% endfor %}
-  </select>
-</div>
-
-<svg id="radar" version="1.1" width="850" height="850" viewBox="0 0 850 850"></svg>
-
-<script type="module">
-  import { create_chart } from 'https://cdn.jsdelivr.net/npm/blips-chart@1.7.0/dist/blips-chart.js';
-
-  const stackSelect = document.getElementById("stack");
-  const radarSvg = document.getElementById("radar");
-  load_blips();
-  function load_blips() {
-    radarSvg.innerHTML = "";
-
-    const stack = stackSelect.value;
-    let entries = blips;
-    
-    if (stack) {
-      entries = entries.filter(b => {
-        return b.stack.includes(stack);
-      });
-    }
+  <script type="module">
+    import { create_chart } from 'https://cdn.jsdelivr.net/npm/blips-chart@1.7.0/dist/blips-chart.js';
 
     create_chart({
       svg_id: "radar",
@@ -37,9 +11,30 @@
       },
       quadrants: quadrants,
       rings: rings,
-      entries: entries,
+      entries: blips,
     });
-  }
+  </script>
 
-  stackSelect.addEventListener("change", load_blips);
-</script>
+  <div class="legend">
+    <ul class="inline-list">
+      <li>
+        <svg width="16" height="16">
+          <path d="M 0,16 16,16 8,0 z" style="fill: #ddd;"></path>
+        </svg>
+        Moved up
+      </li>
+      <li>
+        <svg width="16" height="16">
+          <path d="M 0,0 16,0 8,16 z" style="fill: #ddd;"></path>
+        </svg>
+        Moved down
+      </li>
+      <li>
+        <svg width="16" height="16">
+          <circle r="8" cx="8" cy="8" fill="#ddd"></circle>
+        </svg>
+        Not moved
+      </li>
+    </ul>
+  </div>
+</section>

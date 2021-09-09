@@ -1,11 +1,15 @@
 ---
-title: Sample Tech Radar
+layout: default
 ---
 <!-- Initialize data variables, they will be used
 by the radar chart and by the search box -->
 <script type="application/javascript">
+  const stack = '{{ page.stack }}';
   const baseUrl = '{{ site.baseurl }}';
   const blips = {{ site.blips | jsonify }}
+    .filter(b => {
+      return b.stack.includes(stack);
+    })
     .map(b => {
       b.url = baseUrl + b.url;
       return b;
@@ -19,5 +23,3 @@ by the radar chart and by the search box -->
 {% include radar.html %}
 
 {% include search.html %}
-
-{% include whatis.html %}
