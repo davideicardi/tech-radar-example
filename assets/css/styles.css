@@ -1,0 +1,143 @@
+/* http://meyerweb.com/eric/tools/css/reset/  v2.0 | 20110126 License: none (public domain) */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, input, button, select { margin: 0; padding: 0; border: 0; font-size: inherit; font: inherit; vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+body { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after { content: ""; content: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* Common styles */
+html { font-size: calc(1em + 0.5vw); }
+
+body { background-color: #1d1d1d; color: white; font-family: Arial, Helvetica, sans-serif; }
+
+a, a:visited { color: white; }
+
+h1 { font-weight: bold; font-size: 1.6em; color: #f75258; }
+
+h1 a, h1 a:hover, h1 a:visited { color: #f75258; text-decoration: none; }
+
+h2 { font-size: 1.4em; color: #54f6d1; }
+
+h3 { font-size: 1em; color: #54f6d1; }
+
+p { line-height: 1.4em; padding-top: 0.2em; padding-bottom: 0.5em; }
+
+strong { font-weight: bold; }
+
+input, select { border: 2px solid grey; border-radius: 5px; outline: 0; background-color: #f5f5f5; }
+
+input:hover, input:focus, select:hover, select:focus { border: 2px solid #009688; background-color: white; }
+
+table { width: 100%; border-collapse: collapse; }
+
+table th { text-align: left; color: #54f6d1; }
+
+table th, table td { border: 1px solid #ddd; padding: 0.5em; }
+
+.container { display: flex; flex-direction: column; justify-content: center; }
+
+.container > section { margin: 0 auto; max-width: 1024px; }
+
+.container header { padding: 0.5em; }
+
+.container footer { margin: 0.5em auto; }
+
+.columns { display: flex; flex-direction: row; }
+
+.columns > div { flex: 1; border-right: 1px solid #ddd; }
+
+.columns > div:last-child { border-right: 0; }
+
+.box { padding: 0.5em; }
+
+.box h2 { text-align: center; margin-top: 0.6em; }
+
+ul.inline-list { display: inline; }
+
+ul.inline-list li { display: inline; padding: 0.125em 0.25em; }
+
+/* Specific styles */
+.stacks-box { text-align: center; }
+
+.stacks-box .selected { background-color: #54f6d1; border-radius: 5px; }
+
+.stacks-box .selected a { color: #1d1d1d; text-decoration: none; }
+
+.radar-box { padding: 0; }
+
+.radar-box #radar .grid { stroke: #ddd; }
+
+.radar-box #radar .grid text { stroke: none; }
+
+.radar-box #radar .grid .quadrants text { fill: #ddd; }
+
+.radar-box #radar .ring-HOLD { fill: #f75258; }
+
+.radar-box #radar .ring-ASSESS { fill: #6f58c4; }
+
+.radar-box #radar .ring-TRIAL { fill: #5371f7; }
+
+.radar-box #radar .ring-ADOPT { fill: #54f6d1; }
+
+.radar-box #radar .moved .shape { stroke: #f8f566; stroke-width: 2px; }
+
+.radar-box .legend { font-size: 0.7em; }
+
+.radar-box .legend .shape { fill: #ddd; }
+
+.radar-box .legend .moved .shape { stroke: #f8f566; stroke-width: 2px; fill: none; }
+
+.page header { text-align: center; }
+
+.page header .version { font-size: 0.8em; }
+
+.page h3 { padding-left: 0.2em; }
+
+.page h3 + *, .page h3 { border-left: 1px solid #009688; }
+
+.page h3 + * { padding-left: 1em; }
+
+.page footer { margin-top: 1em; font-size: 0.8em; }
+
+.page footer ul dt { display: inline; }
+
+.page footer ul dt::after { content: ":"; }
+
+.ring-ADOPT { color: #f75258; }
+
+.ring-ASSESS { color: #5371f7; }
+
+.ring-TRIAL { color: #54f6d1; }
+
+.ring-HOLD { color: #6f58c4; }
+
+.search-box { min-width: 300px; }
+
+@media screen and (min-width: 767px) { .search-box { min-width: 600px; } }
+
+@media screen and (min-width: 1024px) { .search-box { min-width: 800px; } }
+
+.search-box .search-bar { display: flex; flex-direction: row; justify-content: center; align-items: stretch; }
+
+.search-box .search-bar input { padding-left: 0.2em; flex: 1; background-image: url("data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDU2Ljk2NiA1Ni45NjYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDU2Ljk2NiA1Ni45NjY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPHBhdGggZD0iTTU1LjE0Niw1MS44ODdMNDEuNTg4LDM3Ljc4NmMzLjQ4Ni00LjE0NCw1LjM5Ni05LjM1OCw1LjM5Ni0xNC43ODZjMC0xMi42ODItMTAuMzE4LTIzLTIzLTIzcy0yMywxMC4zMTgtMjMsMjMgIHMxMC4zMTgsMjMsMjMsMjNjNC43NjEsMCw5LjI5OC0xLjQzNiwxMy4xNzctNC4xNjJsMTMuNjYxLDE0LjIwOGMwLjU3MSwwLjU5MywxLjMzOSwwLjkyLDIuMTYyLDAuOTIgIGMwLjc3OSwwLDEuNTE4LTAuMjk3LDIuMDc5LTAuODM3QzU2LjI1NSw1NC45ODIsNTYuMjkzLDUzLjA4LDU1LjE0Niw1MS44ODd6IE0yMy45ODQsNmM5LjM3NCwwLDE3LDcuNjI2LDE3LDE3cy03LjYyNiwxNy0xNywxNyAgcy0xNy03LjYyNi0xNy0xN1MxNC42MSw2LDIzLjk4NCw2eiIgZmlsbD0iIzAwMDAwMCIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K"); background-size: auto; background-position: right center; background-repeat: no-repeat; }
+
+.search-box .search-results { min-height: 50px; }
+
+.search-box .search-results li { line-height: 2em; }
+
+.search-box .testimonials { font-size: 0.8em; text-align: center; }
+
+.search-box .categories { font-size: 0.8em; text-align: center; }
+
+.search-box .search-tools { margin-top: 0.5em; display: flex; justify-content: center; }
+
+/*# sourceMappingURL=styles.css.map */
