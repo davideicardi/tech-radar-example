@@ -6,7 +6,6 @@ website: https://dotnet.microsoft.com/
 moved: 0
 categories: [language]
 testimonials: [project1, project2]
-stack: [web]
 version: 5
 ---
 

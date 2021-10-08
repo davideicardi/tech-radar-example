@@ -23,6 +23,7 @@ html { font-size: calc(1em + 0.5vw) }
 body {
   background-color: #1d1d1d;
   color: white;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 a,
@@ -151,17 +152,45 @@ ul.inline-list {
 
 .radar-box {
   padding: 0;
-  .stack {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
 
-    select {
-      min-width: 20%;
+  #radar {
+    .grid {
+      stroke: #ddd;
+      text {
+        stroke: none;
+      }
+      .quadrants text {
+        fill: #ddd;
+      }
     }
+    .ring-HOLD {
+      fill: #f75258;
+    }
+    .ring-ASSESS {
+      fill: #6f58c4;
+    }
+    .ring-TRIAL {
+      fill: #5371f7;
+    }
+    .ring-ADOPT {
+      fill: #54f6d1;
+    }
+    .moved .shape {
+      stroke: #f8f566;
+      stroke-width: 2px;
+    }  
   }
+  
   .legend {
     font-size: 0.7em;
+    .shape {
+      fill: #ddd;
+    }
+    .moved .shape {
+      stroke: #f8f566;
+      stroke-width: 2px;
+      fill: none;
+    }  
   }
 }
 

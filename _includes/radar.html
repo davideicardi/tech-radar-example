@@ -2,7 +2,7 @@
   <svg id="radar" version="1.1" width="850" height="850" viewBox="0 0 850 850"></svg>
 
   <script type="module">
-    import { create_chart } from 'https://cdn.jsdelivr.net/npm/blips-chart@1.7.0/dist/blips-chart.js';
+    import { create_chart } from 'https://cdn.jsdelivr.net/npm/blips-chart@2.0.0/dist/blips-chart.js';
 
     create_chart({
       svg_id: "radar",
@@ -17,21 +17,21 @@
 
   <div class="legend">
     <ul class="inline-list">
-      <li>
+      <li class="moved">
         <svg width="16" height="16">
-          <path d="M 0,16 16,16 8,0 z" style="fill: #ddd;"></path>
+          <path d="M 0,16 16,16 8,0 z" class="shape"></path>
         </svg>
         Moved up
       </li>
-      <li>
+      <li class="moved">
         <svg width="16" height="16">
-          <path d="M 0,0 16,0 8,16 z" style="fill: #ddd;"></path>
+          <path d="M 0,0 16,0 8,16 z" class="shape"></path>
         </svg>
         Moved down
       </li>
       <li>
         <svg width="16" height="16">
-          <circle r="8" cx="8" cy="8" fill="#ddd"></circle>
+          <circle r="8" cx="8" cy="8" class="shape"></circle>
         </svg>
         Not moved
       </li>
